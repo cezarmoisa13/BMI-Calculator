@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+    android:title="Remove Ads"
+    android:id="@+id/remove_ads_btn"/>
+
+    <item
+        android:title="More apps"
+        android:id="@+id/more_apps_btn"/>
+
+    <item
+        android:title="Contact us"
+        android:id="@+id/credits_btn"/>
+
+</menu>

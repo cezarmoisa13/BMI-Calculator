@@ -1,0 +1,28 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="TextAppearance.AppCompat.Widget.ActionBar.Title" parent="@android:style/TextAppearance">
+        <item name="android:textSize">20dp</item>
+        <item name="android:textColor">@color/title_color</item>
+        <item name="android:fontFamily">@font/roboto_slab_bold</item>
+    </style>
+    <!-- switch style -->
+    <style name="SwitchTheme" parent="Theme.AppCompat.Light">
+        <!-- color of the circle (thumb) when closed -->
+        <item name="colorControlActivated">#FFFFFF</item>
+        <item name="colorSwitchThumbNormal">#FFFFFF</item>
+        <item name="android:colorForeground">#FFFFFF</item>
+    </style>
+    <!-- edittext style -->
+    <style name="EditTextTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorControlNormal">@color/light_blue</item>
+        <item name="colorControlActivated">@color/dark_blue</item>
+        <item name="colorControlHighlight">@color/dark_blue</item>
+    </style>
+</resources>
