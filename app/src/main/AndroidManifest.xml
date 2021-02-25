@@ -39,29 +39,24 @@
             android:value="ca-app-pub-4574445756996951~9689021672" /> <!-- Declare parents for the back button to know where to go -->
         <activity
             android:name=".ActivityBFP_done"
-            android:configChanges="orientation"
             android:screenOrientation="portrait"
             android:parentActivityName=".ActivityBFP" />
         <activity
             android:name=".ActivityBMI_done"
-            android:configChanges="orientation"
             android:screenOrientation="portrait"
             android:parentActivityName=".ActivityBMI" />
         <activity
             android:name=".ActivityBMI"
-            android:configChanges="orientation"
             android:screenOrientation="portrait"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".ActivityBFP"
-            android:configChanges="orientation"
             android:screenOrientation="portrait"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"
-                    android:configChanges="orientation"
-                    android:screenOrientation="portrait"/>
+                <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>

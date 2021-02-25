@@ -268,33 +268,40 @@ public class ActivityBFP extends AppCompatActivity {
                                         BFP = BMI * bmiconverter - age_value - sex_value + 1.4;
                                     }
                                     BFP = new BigDecimal(BFP).setScale(1, BigDecimal.ROUND_HALF_UP).doubleValue();
-                                    //ideal weight calculation with BMI = 21.75
-                                    double idealWeight = 21.75 * height_value;
-                                    idealWeight = new BigDecimal(idealWeight).setScale(1, BigDecimal.ROUND_HALF_UP).doubleValue();
-                                    //unit measurement
-                                    String measurement = "LBS";
-                                    if(inlbs==false)
-                                        measurement = "KG";
-                                    //open next activity + pass BMI value to ActivityBMI_done
-                                    Log.d("BPF", String.valueOf(BFP));
-                                    openBFP_done(BFP,idealWeight,measurement);
-                                    //Show interstitial ad
-                                    if(AdsDisabled_str.equals("false")){
-                                        if (Interstitial1.isLoaded()) {
-                                            Log.d("tgaa", "The interstitial is showed");
-                                            Interstitial1.show();
-                                        }
-                                        else {
-                                            Log.d("tgaa", "The interstitial wasn't loaded yet.");
-                                        }
-                                        Interstitial1.setAdListener(new AdListener() {
-                                            @Override
-                                            public void onAdClosed() {
-                                                //Load next interstitial ad
-                                                Interstitial1.loadAd(new AdRequest.Builder().build());
+                                    //BFP too big
+                                    if(BFP>500){
+                                        Toast.makeText(getApplicationContext(), "Please, insert normal values.", duration).show();
+                                        particularcases=true;
+                                    }
+                                    if(particularcases==false){
+                                        //ideal weight calculation with BMI = 21.75
+                                        double idealWeight = 21.75 * height_value;
+                                        idealWeight = new BigDecimal(idealWeight).setScale(1, BigDecimal.ROUND_HALF_UP).doubleValue();
+                                        //unit measurement
+                                        String measurement = "LBS";
+                                        if(inlbs==false)
+                                            measurement = "KG";
+                                        //open next activity + pass BMI value to ActivityBMI_done
+                                        Log.d("BPF", String.valueOf(BFP));
+                                        openBFP_done(BFP,idealWeight,measurement);
+                                        //Show interstitial ad
+                                        if(AdsDisabled_str.equals("false")){
+                                            if (Interstitial1.isLoaded()) {
+                                                Log.d("tgaa", "The interstitial is showed");
+                                                Interstitial1.show();
                                             }
+                                            else {
+                                                Log.d("tgaa", "The interstitial wasn't loaded yet.");
+                                            }
+                                            Interstitial1.setAdListener(new AdListener() {
+                                                @Override
+                                                public void onAdClosed() {
+                                                    //Load next interstitial ad
+                                                    Interstitial1.loadAd(new AdRequest.Builder().build());
+                                                }
 
-                                        });
+                                            });
+                                        }
                                     }
                                 }
                             }

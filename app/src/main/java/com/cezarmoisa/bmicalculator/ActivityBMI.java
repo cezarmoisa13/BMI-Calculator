@@ -209,31 +209,38 @@ public class ActivityBMI extends AppCompatActivity {
                         if(particularcases==false){
                             double BMI = weight_value / height_value;
                             BMI = new BigDecimal(BMI).setScale(1, BigDecimal.ROUND_HALF_UP).doubleValue();
-                            //ideal weight calculation with BMI = 21.75
-                            double idealWeight = 21.75 * height_value;
-                            idealWeight = new BigDecimal(idealWeight).setScale(1, BigDecimal.ROUND_HALF_UP).doubleValue();
-                            //unit measurement
-                            String measurement = "LBS";
-                            if(inlbs==false)
-                                measurement = "KG";
-                            openBMI_done(BMI,idealWeight,measurement);
-                            //Show interstitial ad
-                            if(AdsDisabled_str.equals("false")){
-                                if (Interstitial1.isLoaded()) {
-                                    Log.d("tgaa", "The interstitial is showed");
-                                    Interstitial1.show();
-                                }
-                                else {
-                                    Log.d("tgaa", "The interstitial wasn't loaded yet.");
-                                }
-                                Interstitial1.setAdListener(new AdListener() {
-                                    @Override
-                                    public void onAdClosed() {
-                                        //Load next interstitial ad
-                                        Interstitial1.loadAd(new AdRequest.Builder().build());
+                            //BMI too big
+                            if(BMI>500){
+                                Toast.makeText(getApplicationContext(), "Please, insert normal values.", duration).show();
+                                particularcases=true;
+                            }
+                            if(particularcases==false) {
+                                //ideal weight calculation with BMI = 21.75
+                                double idealWeight = 21.75 * height_value;
+                                idealWeight = new BigDecimal(idealWeight).setScale(1, BigDecimal.ROUND_HALF_UP).doubleValue();
+                                //unit measurement
+                                String measurement = "LBS";
+                                if(inlbs==false)
+                                    measurement = "KG";
+                                openBMI_done(BMI,idealWeight,measurement);
+                                //Show interstitial ad
+                                if(AdsDisabled_str.equals("false")){
+                                    if (Interstitial1.isLoaded()) {
+                                        Log.d("tgaa", "The interstitial is showed");
+                                        Interstitial1.show();
                                     }
+                                    else {
+                                        Log.d("tgaa", "The interstitial wasn't loaded yet.");
+                                    }
+                                    Interstitial1.setAdListener(new AdListener() {
+                                        @Override
+                                        public void onAdClosed() {
+                                            //Load next interstitial ad
+                                            Interstitial1.loadAd(new AdRequest.Builder().build());
+                                        }
 
-                                });
+                                    });
+                                }
                             }
                         }
                     }
