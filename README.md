@@ -29,3 +29,5 @@ Icon (Icon.txt)
 <--Perfect size(resize settings)-->
 
 Toast(for every mistake)
+
+![Imagine reprezentativa 1024x500 (1)](https://user-images.githubusercontent.com/72437496/111508450-65366b80-8754-11eb-8196-d9ff1e62a1a4.png)
