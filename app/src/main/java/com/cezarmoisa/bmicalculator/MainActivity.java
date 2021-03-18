@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity implements PurchasesUpdatedL
     //item to purchase
     public static final String PREF_FILE= "MyPref";
     public static final String PURCHASE_KEY= "Remove Ads";
-    public static final String PRODUCT_ID= "remove_ads1";
+    public static final String PRODUCT_ID= "YOUR ID";
     //billing buttons test
     public boolean AdsDisabled = false;
     String AdsDisabled1 = "false";
