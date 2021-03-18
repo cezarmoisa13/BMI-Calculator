@@ -91,7 +91,7 @@ public class ActivityBMI extends AppCompatActivity {
 
         //Interstital Ad
         Interstitial1 = new InterstitialAd(this);
-        Interstitial1.setAdUnitId("ca-app-pub-4574445756996951/4516300634");
+        Interstitial1.setAdUnitId("ca-app-pub-YOUR CODE FROM ADMOB");
         Interstitial1.loadAd(new AdRequest.Builder().build());
 
         //Calculate button
