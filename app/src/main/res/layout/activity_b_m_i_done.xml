@@ -17,7 +17,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="650dp"
         app:adSize="BANNER"
-        app:adUnitId="ca-app-pub-4574445756996951/9730202517"
+        app:adUnitId="ca-app-pub-YOUR CODE FROM ADMOB"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
