@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    <!-- Background image -->
     android:background="@drawable/blue_background"
     android:id="@+id/main_act"
     tools:context=".MainActivity">
